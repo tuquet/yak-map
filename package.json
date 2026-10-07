@@ -1,0 +1,43 @@
+{
+  "name": "yak-map",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.14.0",
+  "description": "Tu Quet's Yak Map",
+  "scripts": {
+    "build": "nuxi build",
+    "dev": "nuxi dev",
+    "generate": "nuxi generate",
+    "prepare": "nuxi prepare",
+    "start": "node .output/server/index.mjs",
+    "start:generate": "npx serve .output/public",
+    "lint": "eslint .",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "vis-data": "^8.0.1",
+    "vis-network": "^10.0.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^5.1.0",
+    "@iconify-json/carbon": "^1.2.11",
+    "@iconify-json/ph": "^1.2.2",
+    "@iconify-json/twemoji": "^1.2.2",
+    "@nuxt/devtools": "^2.6.2",
+    "@nuxt/eslint": "^1.7.1",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@pinia/nuxt": "^0.11.2",
+    "@types/chroma-js": "^3.1.1",
+    "@unocss/eslint-config": "^66.4.1",
+    "@unocss/nuxt": "^66.4.1",
+    "@vueuse/nuxt": "^13.6.0",
+    "chroma-js": "^3.1.2",
+    "consola": "^3.4.2",
+    "eslint": "^9.32.0",
+    "eslint-plugin-format": "^1.0.1",
+    "nuxt": "^4.0.2",
+    "pinia": "^3.0.3",
+    "typescript": "^5.9.2",
+    "vue-tsc": "^3.0.5"
+  }
+}
