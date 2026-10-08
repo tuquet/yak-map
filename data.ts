@@ -33,7 +33,7 @@ const colors = {
 export const primary: ProjectNode[] = [
   {
     name: 'tuquet/cli',
-    display: 'tuquet (Master CLI & MCP)',
+    display: 'specter (Master CLI & MCP)',
     link: 'https://github.com/tuquet/cli',
     color: colors.cli,
     x: 0,
