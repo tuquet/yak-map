@@ -8,7 +8,7 @@ const query = useUrlSearchParams('history', {
     clicks: 1,
     mode: 'all' as 'all' | 'steps',
     embedded: false,
-    secondary: false,
+    secondary: true,
   },
   removeFalsyValues: true,
   removeNullishValues: true,

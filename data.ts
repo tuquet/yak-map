@@ -51,7 +51,10 @@ export const primary: ProjectNode[] = [
     display: 'automa',
     link: 'https://github.com/tuquet/automa',
     color: colors.automa,
-    from: [{ name: 'tuquet/cli', label: 'Launch' }],
+    from: [
+      { name: 'tuquet/cli', label: 'Launch' },
+      { name: 'tuquet/extension-runner', label: 'Polyfill' },
+    ],
   },
   {
     name: 'tuquet/browser',
@@ -61,7 +64,7 @@ export const primary: ProjectNode[] = [
     from: [
       { name: 'tuquet/runner', label: 'Runs' },
       { name: 'tuquet/automa', label: 'CDP' },
-      { name: 'tuquet/cli', label: 'Proxy' }
+      { name: 'tuquet/cli', label: 'Proxy' },
     ],
   },
   {
@@ -76,7 +79,10 @@ export const primary: ProjectNode[] = [
     display: 'bot',
     link: 'https://github.com/tuquet/bot',
     color: colors.telegram,
-    from: [{ name: 'tuquet/cloud', label: 'Webhooks' }],
+    from: [
+      { name: 'tuquet/cloud', label: 'Webhooks' },
+      { name: 'tuquet/cli', label: 'ChatOps' },
+    ],
   },
   {
     name: 'tuquet/lib',
@@ -90,7 +96,10 @@ export const primary: ProjectNode[] = [
     display: 'claude-agy',
     link: 'https://github.com/tuquet/claude-agy',
     color: colors.claude,
-    from: [{ name: 'tuquet/cli', label: 'MCP' }],
+    from: [
+      { name: 'tuquet/cli', label: 'MCP' },
+      { name: 'tuquet/skills', label: 'Runbooks' },
+    ],
   },
   {
     name: 'tuquet/faker',
@@ -131,7 +140,10 @@ export const secondary: ProjectNode[] = [
     display: 'vue-table',
     link: 'https://github.com/tuquet/lib/tree/main/packages/vue-table',
     color: colors.lib,
-    from: ['tuquet/lib'],
+    from: [
+      { name: 'tuquet/lib', label: 'Monorepo' },
+      { name: 'tuquet/vue-ui', label: 'Components' },
+    ],
   },
   {
     name: 'tuquet/md-export',
@@ -145,7 +157,10 @@ export const secondary: ProjectNode[] = [
     display: 'extension-runner',
     link: 'https://github.com/tuquet/lib/tree/main/packages/extension-runner',
     color: colors.automa,
-    from: ['tuquet/automa'],
+    from: [
+      { name: 'tuquet/lib', label: 'Monorepo' },
+      { name: 'tuquet/automa', label: 'Polyfill' },
+    ],
   },
   {
     name: 'tuquet/lunar',
@@ -165,7 +180,7 @@ export const secondary: ProjectNode[] = [
 ]
 
 secondary.forEach((p, idx) => {
-  p.faded = true
+  p.faded = false
   if (idx)
     p.animateStop = false
 })
