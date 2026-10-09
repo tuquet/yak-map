@@ -68,7 +68,7 @@ export const primary: ProjectNode[] = [
     display: 'cloud',
     link: 'https://github.com/tuquet/cloud',
     color: colors.cloud,
-    from: [{ name: 'tuquet/cli', label: 'Telemetry' }],
+    from: [{ name: 'tuquet/cli', label: 'DB Push/Pull' }],
   },
   {
     name: 'tuquet/bot',
