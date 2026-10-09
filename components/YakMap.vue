@@ -44,6 +44,7 @@ function toNode(project: ProjectNode, focus = false) {
   return {
     id: project.name,
     label: project.display || project.name,
+    title: project.name,
     ...project,
     ...project.dashed
       ? {

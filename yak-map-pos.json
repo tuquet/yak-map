@@ -15,56 +15,56 @@
     "x": -520,
     "y": 0
   },
-  "tuquet/cloud": {
-    "x": 280,
-    "y": -140
-  },
-  "tuquet/bot": {
-    "x": 520,
-    "y": -140
-  },
-  "tuquet/lib": {
-    "x": 280,
-    "y": 140
-  },
-  "tuquet/claude-agy": {
-    "x": 0,
-    "y": 240
-  },
-  "tuquet/faker": {
-    "x": 520,
-    "y": 140
-  },
-  "tuquet/skills": {
-    "x": -140,
-    "y": 240
-  },
-  "tuquet/vue-ui": {
-    "x": 140,
-    "y": 300
-  },
-  "tuquet/vue-table": {
-    "x": 420,
-    "y": 300
-  },
-  "tuquet/md-export": {
-    "x": 280,
-    "y": 380
-  },
-  "tuquet/extension-runner": {
-    "x": -420,
-    "y": 280
-  },
-  "tuquet/lunar": {
-    "x": 540,
-    "y": 280
+  "tuquet/storage": {
+    "x": -520,
+    "y": -180
   },
   "tuquet/scoop-bucket": {
     "x": -140,
     "y": -280
   },
-  "tuquet/storage": {
-    "x": -380,
+  "tuquet/cloud": {
+    "x": 300,
     "y": -140
+  },
+  "tuquet/bot": {
+    "x": 560,
+    "y": -140
+  },
+  "tuquet/lib": {
+    "x": 300,
+    "y": 120
+  },
+  "tuquet/faker": {
+    "x": 560,
+    "y": 120
+  },
+  "tuquet/skills": {
+    "x": -200,
+    "y": 260
+  },
+  "tuquet/claude-agy": {
+    "x": 0,
+    "y": 260
+  },
+  "tuquet/extension-runner": {
+    "x": -460,
+    "y": 260
+  },
+  "tuquet/vue-ui": {
+    "x": 160,
+    "y": 280
+  },
+  "tuquet/md-export": {
+    "x": 320,
+    "y": 340
+  },
+  "tuquet/vue-table": {
+    "x": 460,
+    "y": 280
+  },
+  "tuquet/lunar": {
+    "x": 600,
+    "y": 280
   }
 }
