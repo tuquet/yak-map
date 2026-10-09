@@ -76,10 +76,10 @@ function toEdges(project: ProjectNode) {
   const [_l, c, h] = color.oklch()
 
   return [
-    ...(project.from || []).map(fromItem => {
-      const isStr = typeof fromItem === 'string';
-      const from = isStr ? fromItem : fromItem.name;
-      const label = isStr ? undefined : fromItem.label;
+    ...(project.from || []).map((fromItem) => {
+      const isStr = typeof fromItem === 'string'
+      const from = isStr ? fromItem : fromItem.name
+      const label = isStr ? undefined : fromItem.label
       return {
         id: `${project.name}|${from}`,
         from,
@@ -90,7 +90,7 @@ function toEdges(project: ProjectNode) {
           size: 11,
           align: 'middle',
           strokeWidth: 2,
-          strokeColor: backgroundColor.value
+          strokeColor: backgroundColor.value,
         },
         color: chroma.oklch(luminance.value, c, h).mix(backgroundColor.value, 0.8).hex(),
         arrows: {

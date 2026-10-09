@@ -26,7 +26,7 @@
 
 ## 📋 Executive Summary
 
-**Yak-Map** is an interactive, high-fidelity visual dependency graph and derivation map engineered for the **Tuquet Distributed Automation & AI Agent Ecosystem**. 
+**Yak-Map** is an interactive, high-fidelity visual dependency graph and derivation map engineered for the **Tuquet Distributed Automation & AI Agent Ecosystem**.
 
 As modern systems grow across multiple languages (Rust, TypeScript, Vue 3, Shell) and modular repositories, understanding the topological relationships, architectural derivations, and downstream impacts of changes becomes a significant challenge. **Yak-Map** solves this by mapping:
 
@@ -84,6 +84,7 @@ flowchart TD
 ```
 
 ### Key Technical Characteristics
+
 - **Nuxt 4 & Nitro**: Fast build times, file-based routing, instant auto-imports, and static site pre-rendering (`nuxi generate`).
 - **UnoCSS Engine**: On-demand utility engine providing instant styling with zero CSS runtime overhead.
 - **Vis Network**: Canvas-based 2D force-directed physics engine handling smooth drag, zoom, node selection, and cluster navigation.
@@ -99,53 +100,58 @@ The graph topology is defined as TypeScript structures in [`data.ts`](./data.ts)
 
 ```typescript
 export interface ProjectNode extends Partial<Node> {
-  name: string          // Unique repository or package identifier (e.g. 'tuquet/runner')
-  display?: string      // Human-friendly title rendered on the node label
-  link: string          // External GitHub repository or documentation URL
-  color?: string        // Categorical hex color from the palette
-  from?: string[]       // Upstream origin nodes (creates directed solid arrows: from -> node)
-  deps?: string[]       // Peer/Downstream dependencies (creates dashed physics-free links)
-  dashed?: boolean      // Render dashed border (used for distribution buckets, config manifests)
-  faded?: boolean       // Visual fading for secondary sub-packages
-  x?: number            // Explicit X coordinate
-  y?: number            // Explicit Y coordinate
+  name: string // Unique repository or package identifier (e.g. 'tuquet/runner')
+  display?: string // Human-friendly title rendered on the node label
+  link: string // External GitHub repository or documentation URL
+  color?: string // Categorical hex color from the palette
+  from?: string[] // Upstream origin nodes (creates directed solid arrows: from -> node)
+  deps?: string[] // Peer/Downstream dependencies (creates dashed physics-free links)
+  dashed?: boolean // Render dashed border (used for distribution buckets, config manifests)
+  faded?: boolean // Visual fading for secondary sub-packages
+  x?: number // Explicit X coordinate
+  y?: number // Explicit Y coordinate
   animateStop?: boolean // Stop point flag during step-by-step presentation mode
 }
 ```
 
 ### 2. Canonical Color Palette
 
-| Category | Color Code | Scope |
-| :--- | :--- | :--- |
-| **CLI** | `#3b82f6` (Blue) | Unified Master CLI, Scoped Shell, and Scoop Distribution. |
-| **Runner** | `#ef4444` (Red) | Pure Rust Native Task Runner, Process Supervisor & Daemon. |
-| **Automa** | `#f59e0b` (Amber) | Automa DAG Engine, Drawflow Studio, MV3 Runner. |
-| **Browser** | `#f97316` (Orange) | Chromium LTS Sandboxing, Fingerprint Protection. |
-| **Cloud** | `#10b981` (Green) | Supabase Control Plane, Multi-Tenant Database, Edge Functions. |
-| **Bot** | `#14b8a6` (Teal) | Telegram Ops Daemon, Real-Time Alerts. |
-| **Lib** | `#06b6d4` (Cyan) | Shared TypeScript Monorepo (`@tuquet/vue-ui`, `@tuquet/vue-table`, etc.). |
-| **Claude / AI** | `#8b5cf6` (Purple) | Claude-Agy Proxy Bridge, Antigravity Agent Skills. |
+| Category        | Color Code         | Scope                                                                     |
+| :-------------- | :----------------- | :------------------------------------------------------------------------ |
+| **CLI**         | `#3b82f6` (Blue)   | Unified Master CLI, Scoped Shell, and Scoop Distribution.                 |
+| **Runner**      | `#ef4444` (Red)    | Pure Rust Native Task Runner, Process Supervisor & Daemon.                |
+| **Automa**      | `#f59e0b` (Amber)  | Automa DAG Engine, Drawflow Studio, MV3 Runner.                           |
+| **Browser**     | `#f97316` (Orange) | Chromium LTS Sandboxing, Fingerprint Protection.                          |
+| **Cloud**       | `#10b981` (Green)  | Supabase Control Plane, Multi-Tenant Database, Edge Functions.            |
+| **Bot**         | `#14b8a6` (Teal)   | Telegram Ops Daemon, Real-Time Alerts.                                    |
+| **Lib**         | `#06b6d4` (Cyan)   | Shared TypeScript Monorepo (`@tuquet/vue-ui`, `@tuquet/vue-table`, etc.). |
+| **Claude / AI** | `#8b5cf6` (Purple) | Claude-Agy Proxy Bridge, Antigravity Agent Skills.                        |
 
 ---
 
 ## ⚡ Quick Start & Local Development
 
 ### Prerequisites
+
 - **Node.js**: `>= 20.x`
 - **pnpm**: `>= 10.x`
 
 ### 1. Install Dependencies
+
 ```bash
 pnpm install
 ```
 
 ### 2. Start Local Development Server
+
 ```bash
 pnpm run dev
 ```
+
 Navigate to `http://localhost:3000` to interact with the map in real time. Hot Module Replacement (HMR) automatically reflects edits in `data.ts` and UI components.
 
 ### 3. Verification & Code Quality
+
 ```bash
 # Typecheck TypeScript definitions
 pnpm run typecheck
@@ -155,6 +161,7 @@ pnpm run lint
 ```
 
 ### 4. Build & Preview
+
 ```bash
 # Build production server bundle
 pnpm run build
@@ -173,6 +180,7 @@ pnpm run start:generate
 When a new repository, package, or tool is added to the Tuquet ecosystem, follow this workflow to include it on the map:
 
 ### 1. Add Node Definition to `data.ts`
+
 Open [`data.ts`](./data.ts) (or `app/data/nodes.ts`):
 
 ```typescript
@@ -184,8 +192,8 @@ export const primary: ProjectNode[] = [
     display: 'my-service (High-Performance Engine)',
     link: 'https://github.com/tuquet/my-new-service',
     color: colors.runner,
-    from: ['tuquet/cli'],              // Connected upstream source
-    deps: ['tuquet/cloud'],            // Additional dependency links
+    from: ['tuquet/cli'], // Connected upstream source
+    deps: ['tuquet/cloud'], // Additional dependency links
   },
 ]
 
@@ -203,6 +211,7 @@ export const secondary: ProjectNode[] = [
 ```
 
 ### 2. Adjust Layout Coordinates (`yak-map-pos.json`)
+
 - If automatic force simulation places the node appropriately, you do not need to manually specify coordinates.
 - To lock a precise coordinate:
   1. Set `isEditing: true` in `pages/index.vue` or enable drag mode.
@@ -210,6 +219,7 @@ export const secondary: ProjectNode[] = [
   3. Export or copy the new `{ x, y }` coordinates into [`yak-map-pos.json`](./yak-map-pos.json) under the node's `name` key.
 
 ### 3. Verify Connections
+
 - Run `pnpm run dev` and ensure:
   - Solid arrows (`from`) point cleanly from parent to child.
   - Dashed lines (`deps`) connect cross-cutting dependencies without physics tangling.
