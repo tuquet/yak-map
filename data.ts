@@ -59,6 +59,7 @@ export const primary: ProjectNode[] = [
     link: 'https://github.com/tuquet/browser',
     color: colors.browser,
     from: [
+      { name: 'tuquet/runner', label: 'Runs' },
       { name: 'tuquet/automa', label: 'CDP' },
       { name: 'tuquet/cli', label: 'Proxy' }
     ],
