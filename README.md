@@ -118,7 +118,7 @@ export interface ProjectNode extends Partial<Node> {
 | Category | Color Code | Scope |
 | :--- | :--- | :--- |
 | **CLI** | `#3b82f6` (Blue) | Unified Master CLI, Scoped Shell, and Scoop Distribution. |
-| **Runner** | `#ef4444` (Red) | Rust Universal Runner, Win32 Job Object Supervisor, Daemon. |
+| **Runner** | `#ef4444` (Red) | Pure Rust Native Task Runner, Process Supervisor & Daemon. |
 | **Automa** | `#f59e0b` (Amber) | Automa DAG Engine, Drawflow Studio, MV3 Runner. |
 | **Browser** | `#f97316` (Orange) | Chromium LTS Sandboxing, Fingerprint Protection. |
 | **Cloud** | `#10b981` (Green) | Supabase Control Plane, Multi-Tenant Database, Edge Functions. |
