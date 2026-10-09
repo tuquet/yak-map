@@ -180,7 +180,7 @@ onMounted(() => {
         enabled: false,
       },
       interaction: {
-        dragNodes: false,
+        dragNodes: true,
       },
     },
   )
@@ -224,7 +224,7 @@ onMounted(() => {
   watchEffect(() => {
     network.setOptions({
       interaction: {
-        dragNodes: !!props.isEditing,
+        dragNodes: true,
         hover: true,
       },
     })
