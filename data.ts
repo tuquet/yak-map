@@ -44,7 +44,7 @@ export const primary: ProjectNode[] = [
     display: 'runner',
     link: 'https://github.com/tuquet/runner',
     color: colors.runner,
-    from: [{ name: 'tuquet/cli', label: 'Spawn' }],
+    from: [{ name: 'tuquet/cli', label: 'Orchestrates' }],
   },
   {
     name: 'tuquet/automa',
@@ -52,8 +52,8 @@ export const primary: ProjectNode[] = [
     link: 'https://github.com/tuquet/automa',
     color: colors.automa,
     from: [
-      { name: 'tuquet/cli', label: 'Launch' },
-      { name: 'tuquet/extension-runner', label: 'Polyfill' },
+      { name: 'tuquet/cli', label: 'Runs Workflow' },
+      { name: 'tuquet/extension-runner', label: 'Extension Polyfill' },
     ],
   },
   {
@@ -62,9 +62,9 @@ export const primary: ProjectNode[] = [
     link: 'https://github.com/tuquet/browser',
     color: colors.browser,
     from: [
-      { name: 'tuquet/runner', label: 'Runs' },
-      { name: 'tuquet/automa', label: 'CDP' },
-      { name: 'tuquet/cli', label: 'Proxy' },
+      { name: 'tuquet/runner', label: 'Drives Session' },
+      { name: 'tuquet/automa', label: 'CDP Control' },
+      { name: 'tuquet/cli', label: 'SOCKS5 Tunnel' },
     ],
   },
   {
@@ -72,7 +72,7 @@ export const primary: ProjectNode[] = [
     display: 'cloud',
     link: 'https://github.com/tuquet/cloud',
     color: colors.cloud,
-    from: [{ name: 'tuquet/cli', label: 'DB Push/Pull' }],
+    from: [{ name: 'tuquet/cli', label: 'Fleet Sync' }],
   },
   {
     name: 'tuquet/bot',
@@ -80,8 +80,8 @@ export const primary: ProjectNode[] = [
     link: 'https://github.com/tuquet/bot',
     color: colors.telegram,
     from: [
-      { name: 'tuquet/cloud', label: 'Webhooks' },
-      { name: 'tuquet/cli', label: 'ChatOps' },
+      { name: 'tuquet/cloud', label: 'Event Webhook' },
+      { name: 'tuquet/cli', label: 'ChatOps Control' },
     ],
   },
   {
@@ -89,31 +89,21 @@ export const primary: ProjectNode[] = [
     display: '@tuquet/lib',
     link: 'https://github.com/tuquet/lib',
     color: colors.lib,
-    from: [{ name: 'tuquet/automa', label: 'Consumes' }, { name: 'tuquet/cli', label: 'Scaffolds' }],
-  },
-  {
-    name: 'tuquet/claude-agy',
-    display: 'claude-agy',
-    link: 'https://github.com/tuquet/claude-agy',
-    color: colors.claude,
-    from: [
-      { name: 'tuquet/cli', label: 'MCP' },
-      { name: 'tuquet/skills', label: 'Runbooks' },
-    ],
+    from: [{ name: 'tuquet/automa', label: 'Imports Core' }, { name: 'tuquet/cli', label: 'Scaffolding' }],
   },
   {
     name: 'tuquet/faker',
     display: 'faker',
     link: 'https://github.com/tuquet/faker',
     color: colors.tauri,
-    from: [{ name: 'tuquet/cli', label: 'Spawn' }],
+    from: [{ name: 'tuquet/cli', label: 'Embeds Engine' }],
   },
   {
     name: 'tuquet/skills',
     display: 'skills',
     link: 'https://github.com/tuquet/skills',
     color: colors.claude,
-    from: [{ name: 'tuquet/cli', label: 'Runbooks' }],
+    from: [{ name: 'tuquet/cli', label: 'Skill Registry' }],
   },
   {
     name: 'tuquet/storage',
@@ -121,8 +111,8 @@ export const primary: ProjectNode[] = [
     link: 'https://github.com/tuquet/storage',
     color: colors.cloud,
     from: [
-      { name: 'tuquet/cli', label: 'Assets' },
-      { name: 'tuquet/browser', label: 'Sync Profiles' },
+      { name: 'tuquet/cli', label: 'Asset Storage' },
+      { name: 'tuquet/browser', label: 'Profile Sync' },
     ],
   },
 ]
@@ -133,7 +123,7 @@ export const secondary: ProjectNode[] = [
     display: 'vue-ui',
     link: 'https://github.com/tuquet/lib/tree/main/packages/vue-ui',
     color: colors.lib,
-    from: ['tuquet/lib'],
+    from: [{ name: 'tuquet/lib', label: 'UI Primitives' }],
   },
   {
     name: 'tuquet/vue-table',
@@ -141,8 +131,8 @@ export const secondary: ProjectNode[] = [
     link: 'https://github.com/tuquet/lib/tree/main/packages/vue-table',
     color: colors.lib,
     from: [
-      { name: 'tuquet/lib', label: 'Monorepo' },
-      { name: 'tuquet/vue-ui', label: 'Components' },
+      { name: 'tuquet/lib', label: 'Workspace Package' },
+      { name: 'tuquet/vue-ui', label: 'Consumes UI' },
     ],
   },
   {
@@ -150,7 +140,7 @@ export const secondary: ProjectNode[] = [
     display: 'md-export',
     link: 'https://github.com/tuquet/lib/tree/main/packages/md-export',
     color: colors.lib,
-    from: ['tuquet/lib'],
+    from: [{ name: 'tuquet/lib', label: 'Workspace Package' }],
   },
   {
     name: 'tuquet/extension-runner',
@@ -158,8 +148,8 @@ export const secondary: ProjectNode[] = [
     link: 'https://github.com/tuquet/lib/tree/main/packages/extension-runner',
     color: colors.automa,
     from: [
-      { name: 'tuquet/lib', label: 'Monorepo' },
-      { name: 'tuquet/automa', label: 'Polyfill' },
+      { name: 'tuquet/lib', label: 'Workspace Package' },
+      { name: 'tuquet/automa', label: 'Extension Polyfill' },
     ],
   },
   {
@@ -167,7 +157,7 @@ export const secondary: ProjectNode[] = [
     display: 'lunar',
     link: 'https://github.com/tuquet/lib/tree/main/packages/lunar',
     color: colors.claude,
-    from: ['tuquet/lib'],
+    from: [{ name: 'tuquet/lib', label: 'Workspace Package' }],
   },
   {
     name: 'tuquet/scoop-bucket',
@@ -175,7 +165,7 @@ export const secondary: ProjectNode[] = [
     link: 'https://github.com/tuquet/scoop-bucket',
     color: colors.cli,
     dashed: true,
-    from: ['tuquet/cli'],
+    from: [{ name: 'tuquet/cli', label: 'Distribution' }],
   },
 ]
 
