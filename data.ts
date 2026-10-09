@@ -105,6 +105,16 @@ export const primary: ProjectNode[] = [
     color: colors.claude,
     from: [{ name: 'tuquet/cli', label: 'Reads & Executes' }],
   },
+  {
+    name: 'tuquet/storage',
+    display: 'storage (Cloudflare D1/R2 & WebDAV)',
+    link: 'https://github.com/tuquet/storage',
+    color: colors.cloud,
+    from: [
+      { name: 'tuquet/cli', label: 'Deploy & Assets' },
+      { name: 'tuquet/browser', label: 'Sync Profiles' },
+    ],
+  },
 ]
 
 export const secondary: ProjectNode[] = [

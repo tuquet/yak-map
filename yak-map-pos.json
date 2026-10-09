@@ -62,5 +62,9 @@
   "tuquet/scoop-bucket": {
     "x": -140,
     "y": -280
+  },
+  "tuquet/storage": {
+    "x": -380,
+    "y": -140
   }
 }
