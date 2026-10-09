@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://tuquet.github.io/icons/yak-map.svg" width="96" height="96" alt="Tuquet Yak-Map Logo" />
+  <img src="https://tuquet.com/icons/yak-map.svg" width="96" height="96" alt="Tuquet Yak-Map Logo" />
   <h1>🗺️ Tuquet Yak-Map</h1>
   <p><strong>Interactive Visual Dependency Graph, Monorepo Data Flows & Ecosystem Topology</strong></p>
 
@@ -8,7 +8,7 @@
     <a href="https://unocss.dev/"><img src="https://img.shields.io/badge/UnoCSS-Atomic%20Engine-black.svg" alt="UnoCSS" /></a>
     <a href="https://visjs.github.io/vis-network/docs/network/"><img src="https://img.shields.io/badge/Vis%20Network-Interactive%20Graph-1565C0.svg" alt="Vis Network" /></a>
     <a href="https://github.com/tuquet"><img src="https://img.shields.io/badge/Ecosystem-14%20Repositories-3b82f6.svg" alt="Ecosystem 14 Repositories" /></a>
-    <a href="https://tuquet.github.io/yak-map/"><img src="https://img.shields.io/badge/Deployment-GitHub%20Pages-blue.svg?logo=github" alt="GitHub Pages" /></a>
+    <a href="https://yarkmap.tuquet.com/"><img src="https://img.shields.io/badge/Deployment-GitHub%20Pages-blue.svg?logo=github" alt="GitHub Pages" /></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License" /></a>
   </p>
 
@@ -223,7 +223,7 @@ Yak-Map is continuously deployed to GitHub Pages via GitHub Actions:
 
 - **Workflow**: [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml)
 - **Trigger**: Every push or merge to the `main` branch.
-- **Base URL**: `https://tuquet.github.io/yak-map/` (configured through `NUXT_APP_BASE_URL: /yak-map/`).
+- **Base URL**: `https://yarkmap.tuquet.com/` (configured through `NUXT_APP_BASE_URL: /`).
 - **Hosting**: 100% Serverless, static HTML/JS/CSS assets served directly via GitHub Pages CDN.
 
 ---

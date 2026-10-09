@@ -40,7 +40,7 @@ jobs:
       - name: Build Static Site (Nuxt Generate)
         run: pnpm run generate
         env:
-          NUXT_APP_BASE_URL: /yak-map/
+          NUXT_APP_BASE_URL: /
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

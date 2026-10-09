@@ -57,7 +57,7 @@ function prev() {
         🐃
       </div>
       <div flex="~ col">
-        <a href="https://tuquet.github.io" text-sm op50 hover:underline target="_blank">Tu Quet's</a>
+        <a href="https://tuquet.com" text-sm op50 hover:underline target="_blank">Tu Quet's</a>
         <a text-2xl href="https://github.com/tuquet/yak-map" target="_blank" hover:underline>
           Yak Map
         </a>

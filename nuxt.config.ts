@@ -22,7 +22,7 @@ export default defineNuxtConfig({
   },
 
   app: {
-    baseURL: process.env.NUXT_APP_BASE_URL || (process.env.NODE_ENV === 'production' ? '/yak-map/' : '/'),
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
       title: 'Tu Quet\'s Yak Map',
       meta: [
