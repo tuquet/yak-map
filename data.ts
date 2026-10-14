@@ -159,14 +159,6 @@ export const secondary: ProjectNode[] = [
     color: colors.claude,
     from: [{ name: 'tuquet/lib', label: 'Workspace Package' }],
   },
-  {
-    name: 'tuquet/scoop-bucket',
-    display: 'scoop-bucket',
-    link: 'https://github.com/tuquet/scoop-bucket',
-    color: colors.cli,
-    dashed: true,
-    from: [{ name: 'tuquet/cli', label: 'Distribution' }],
-  },
 ]
 
 secondary.forEach((p, idx) => {
