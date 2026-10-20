@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="https://tuquet.com/icons/yak-map.svg" width="96" height="96" alt="Tuquet Yak-Map Logo" />
-  <h1>🗺️ Tuquet Yak-Map</h1>
+  <img src="https://tuquet.com/icons/yak-map.svg" width="96" height="96" alt="Yak-Map Logo" />
+  <h1>🗺️ Yak-Map</h1>
   <p><strong>Interactive Visual Dependency Graph, Monorepo Data Flows & Ecosystem Topology</strong></p>
 
   <p>
@@ -26,7 +26,7 @@
 
 ## 📋 Executive Summary
 
-**Yak-Map** is an interactive, high-fidelity visual dependency graph and derivation map engineered for the **Tuquet Distributed Automation & AI Agent Ecosystem**.
+**Yak-Map** is an interactive, high-fidelity visual dependency graph and derivation map engineered for the **Distributed Automation & AI Agent Ecosystem**.
 
 As modern systems grow across multiple languages (Rust, TypeScript, Vue 3, Shell) and modular repositories, understanding the topological relationships, architectural derivations, and downstream impacts of changes becomes a significant challenge. **Yak-Map** solves this by mapping:
 
@@ -177,7 +177,7 @@ pnpm run start:generate
 
 ## 🤝 Contributing Nodes & Edges
 
-When a new repository, package, or tool is added to the Tuquet ecosystem, follow this workflow to include it on the map:
+When a new repository, package, or tool is added to the ecosystem, follow this workflow to include it on the map:
 
 ### 1. Add Node Definition to `data.ts`
 

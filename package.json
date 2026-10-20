@@ -1,9 +1,24 @@
 {
-  "name": "yak-map",
-  "type": "module",
+  "name": "@tuquet/yak-map",
+  "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@10.14.0",
   "description": "Tu Quet's Yak Map",
+  "homepage": "https://github.com/tuquet/yak-map#readme",
+  "bugs": {
+    "url": "https://github.com/tuquet/yak-map/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuquet/yak-map.git"
+  },
+  "license": "MIT",
+  "author": "Tuquet Team <dev@tuquet.com>",
+  "type": "module",
+  "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": ">=20.18.0",
+    "pnpm": ">=9.0.0"
+  },
   "scripts": {
     "build": "nuxi build",
     "dev": "nuxi dev",
