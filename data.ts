@@ -21,7 +21,7 @@ export interface ProjectNode extends Partial<Node> {
 const colors = {
   cli: '#3b82f6',
   runner: '#ef4444',
-  automa: '#f59e0b',
+  automation: '#f59e0b',
   browser: '#f97316',
   cloud: '#10b981',
   telegram: '#14b8a6',
@@ -47,10 +47,10 @@ export const primary: ProjectNode[] = [
     from: [{ name: 'tuquet/cli', label: 'Orchestrates' }],
   },
   {
-    name: 'tuquet/automa',
-    display: 'automa',
-    link: 'https://github.com/tuquet/automa',
-    color: colors.automa,
+    name: 'tuquet/automation',
+    display: 'automation',
+    link: 'https://github.com/tuquet/automation',
+    color: colors.automation,
     from: [
       { name: 'tuquet/cli', label: 'Runs Workflow' },
       { name: 'tuquet/extension-runner', label: 'Extension Polyfill' },
@@ -63,7 +63,7 @@ export const primary: ProjectNode[] = [
     color: colors.browser,
     from: [
       { name: 'tuquet/runner', label: 'Drives Session' },
-      { name: 'tuquet/automa', label: 'CDP Control' },
+      { name: 'tuquet/automation', label: 'CDP Control' },
       { name: 'tuquet/cli', label: 'SOCKS5 Tunnel' },
     ],
   },
@@ -89,7 +89,7 @@ export const primary: ProjectNode[] = [
     display: '@tuquet/lib',
     link: 'https://github.com/tuquet/lib',
     color: colors.lib,
-    from: [{ name: 'tuquet/automa', label: 'Imports Core' }, { name: 'tuquet/cli', label: 'Scaffolding' }],
+    from: [{ name: 'tuquet/automation', label: 'Imports Core' }, { name: 'tuquet/cli', label: 'Scaffolding' }],
   },
   {
     name: 'tuquet/faker',
@@ -146,10 +146,10 @@ export const secondary: ProjectNode[] = [
     name: 'tuquet/extension-runner',
     display: 'extension-runner',
     link: 'https://github.com/tuquet/lib/tree/main/packages/extension-runner',
-    color: colors.automa,
+    color: colors.automation,
     from: [
       { name: 'tuquet/lib', label: 'Workspace Package' },
-      { name: 'tuquet/automa', label: 'Extension Polyfill' },
+      { name: 'tuquet/automation', label: 'Extension Polyfill' },
     ],
   },
   {

@@ -30,7 +30,7 @@
 
 As modern systems grow across multiple languages (Rust, TypeScript, Vue 3, Shell) and modular repositories, understanding the topological relationships, architectural derivations, and downstream impacts of changes becomes a significant challenge. **Yak-Map** solves this by mapping:
 
-1. **The 14 Ecosystem Repositories**: Complete inter-connectivity between upstream foundational engines (`tuquet/runner`, `tuquet/cli`, `tuquet/browser`), intermediate orchestrators (`tuquet/automa`, `tuquet/cloud`), AI tooling (`tuquet/claude-agy`, `tuquet/skills`), and operational runbooks.
+1. **The 14 Ecosystem Repositories**: Complete inter-connectivity between upstream foundational engines (`tuquet/runner`, `tuquet/cli`, `tuquet/browser`), intermediate orchestrators (`tuquet/automation`, `tuquet/cloud`), AI tooling (`tuquet/claude-agy`, `tuquet/skills`), and operational runbooks.
 2. **Monorepo Package Hierarchies**: Internal derivations and shared libraries within `@tuquet/lib` (`vue-ui`, `vue-table`, `md-export`, `extension-runner`, `lunar`).
 3. **Data Flow & Control Pipelines**: Explicit directed connections showing how cloud commands, daemon supervision, browser actions, and telemetry flow through the architecture.
 
